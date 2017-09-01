@@ -39,7 +39,8 @@ int KMP(char *s,char *p){
             i++;
             if(j==plen){
                 time++;
-                j=0;
+                j=0;//Find Substr which cannot overlap
+                j=NEXT[j];//Find Str which can overlap
             }
         }else{
             j=NEXT[j];
